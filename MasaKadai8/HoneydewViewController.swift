@@ -14,7 +14,7 @@ class HoneydewViewController: UIViewController {
 
     @IBAction private func changeSlider(_ sender: Any) {
         let delegate = UIApplication.shared.delegate as? AppDelegate
-        delegate?.sliderDelgate = "\(slider.value)"
+        delegate?.sliderValue = "\(slider.value)"
         numberOfLabel.text = "\(slider.value)"
     }
 
@@ -22,7 +22,7 @@ class HoneydewViewController: UIViewController {
         super.viewWillAppear(animated)
 
         let delegate = UIApplication.shared.delegate as? AppDelegate
-        numberOfLabel.text = delegate?.sliderDelgate
+        numberOfLabel.text = delegate?.sliderValue
         delegate?.sliderPoint = slider
     }
 
